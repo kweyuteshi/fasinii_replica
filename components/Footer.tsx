@@ -14,7 +14,7 @@ const Footer = () => {
             <div key={link.title} className="footer__link">
               <h3 className="font-bold text-lg">{link.title}</h3>
               {link.links.map((item) => (
-                <Link key={item.title} href={item.url} className="text-gray-500 text-xs">
+                <Link key={item.title} href={item.url} className="text-white">
                   {item.title}
                 </Link>
               ))}

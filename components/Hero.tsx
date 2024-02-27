@@ -10,9 +10,9 @@ const Hero = () => {
                     <div className="max-w-[1240px] w-full md:h-full mx-auto flex justify-center flex-col">
                         <div className='flex flex-col lg:justify-start md:justify-start'>
                             < div className='py-5 sm:py-5'>
-        <h1 className="text-[#003D64] text-sm font-normal">Why buy a car when you can <span className="text-[#479ED5]">rent it?</span></h1></div>
-        <p className='text-[#003D64] text-xs font-light mt-2 lg:pl-3 lg:pb-2'>Rent your ideal car today</p>
-        <div className='border-0 lg:rounded-full rounded-lg p-2 w-auto flex shadow-lg'>
+        <h1 className="text-[#003D64] text-3xl font-normal">Why buy a car when you can <span className="text-[#479ED5]">rent it?</span></h1></div>
+        <p className='text-[#003D64] text-l font-light mt-2 lg:pl-3 lg:pb-2'>Rent your ideal car today</p>
+        <div className='p-2 w-auto flex shadow-lg'>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 md:flex md:justify-between">
         <div className="mb-4 md:w-1/3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="startDate">

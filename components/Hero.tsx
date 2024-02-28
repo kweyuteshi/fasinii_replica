@@ -1,4 +1,8 @@
 import React from 'react'
+import Form from './Form'
+import CarDetails from '../data/CarDetails.json'
+import CarCard from './CarCard' 
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -10,59 +14,40 @@ const Hero = () => {
                     <div className="max-w-[1240px] w-full md:h-full mx-auto flex justify-center flex-col">
                         <div className='flex flex-col lg:justify-start md:justify-start'>
                             < div className='py-5 sm:py-5'>
-        <h1 className="text-[#003D64] text-3xl font-normal">Why buy a car when you can <span className="text-[#479ED5]">rent it?</span></h1></div>
-        <p className='text-[#003D64] text-l font-light mt-2 lg:pl-3 lg:pb-2'>Rent your ideal car today</p>
-        <div className='p-2 w-auto flex shadow-lg'>
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 md:flex md:justify-between">
-        <div className="mb-4 md:w-1/3">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="startDate">
-            Rental Start Date
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="startDate"
-            type="date"
-            placeholder="Rental Start Date"
-          />
-        </div>
-        <div className="mb-4 md:w-1/3">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="endDate">
-            Rental End Date
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="endDate"
-            type="date"
-            placeholder="Rental End Date"
-          />
-        </div>
-        <div className="mb-6 md:w-1/3">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="location">
-            Location
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="location"
-            type="text"
-            placeholder="Location"
-          />
-        </div>
-        <div className="md:w-full">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline float-right md:float-none"
-            type="button"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+        <h1 className="text-[#003D64] text-3xl font-normal">Why buy a car when you can <span className="text-[#479ED5]">rent it?</span></h1>
+        <p className='text-[#003D64] text-l font-light mt-2 lg:pl-3 lg:pb-2'>Rent your ideal car today</p></div>
+        <Form />
         </div>
         </div>
         </div>
         </div>
+        <div className='w-full h-full'>
+        <div className='flex-col w-full text-[#003D64] mb-4'>
+          <h1 className='text-2xl font-normal mb-2'>Trending cars on <span className='text-[#479ed5]'>Fasinii</span></h1>
+          <p className='mt-2'>These cars based in Nairobi have the highest ratings on fasini</p>
         </div>
+        <div className="flex flex-row items-center my-8 pb-4 overflow-x-auto w-full duration-300">
+      <div className="flex">
+        {CarDetails.cars.map(car => (
+          <CarCard key={car.id} car={car} />
+        ))}
+      </div>
+    </div>
+    </div>
+<div className='w-full relative' >
+  <span className='box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;'>
+  <span className='box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;'></span>
+    <Image alt='sgr' src='/sgr.jpg' width={1440} height={10} />
+  </span>
+  <p className='absolute text-md w-[70%] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9]'><span className='text-[#479ED5]'>Fasinii</span>
+  was created for your convenience,
+  <br />
+  search for the perfect car to embark on your journey
+  </p>
+</div>
         </div>
     </div>
+    
   )
 }
 

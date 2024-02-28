@@ -3,6 +3,9 @@ import Form from './Form'
 import CarDetails from '../data/CarDetails.json'
 import CarCard from './CarCard' 
 import Image from 'next/image';
+import SGRphoto from './SGRphoto';
+import Types from './Types';
+import City from './City';
 
 const Hero = () => {
   return (
@@ -34,17 +37,19 @@ const Hero = () => {
       </div>
     </div>
     </div>
-<div className='w-full relative' >
-  <span className='box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;'>
-  <span className='box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;'></span>
-    <Image alt='sgr' src='/sgr.jpg' width={1440} height={10} />
-  </span>
-  <p className='absolute text-md w-[70%] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9]'><span className='text-[#479ED5]'>Fasinii</span>
-  was created for your convenience,
-  <br />
-  search for the perfect car to embark on your journey
-  </p>
+    <div className='w-full h-full'>
+  <SGRphoto />
 </div>
+<div className='w-full h-full flex flex-col'>
+<Types />
+</div>
+<div className='w-full h-full flex flex-col'>
+  <City />
+</div>
+<div className='w-full h-full flex flex-col'>
+  
+</div>
+
         </div>
     </div>
     

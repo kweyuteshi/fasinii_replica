@@ -1,4 +1,3 @@
-// components/CarCard.js
 import React from 'react';
 
 const CarCard = ({ car }) => {

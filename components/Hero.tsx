@@ -6,6 +6,10 @@ import Image from 'next/image';
 import SGRphoto from './SGRphoto';
 import Types from './Types';
 import City from './City';
+import SecondPhoto from './SecondPhoto';
+import BookOrRent from './BookOrRent';
+import Testimonials from './Testimonials';
+import TestimonialDetails from '../data/TestimonialDetails.json'
 
 const Hero = () => {
   return (
@@ -47,7 +51,30 @@ const Hero = () => {
   <City />
 </div>
 <div className='w-full h-full flex flex-col'>
-  
+  <SecondPhoto />
+</div>
+<div className='w-full h-full flex flex-col'>
+  <BookOrRent />
+</div>
+<div className='w-full h-full'>
+  <div className='mx-auto pt-12 mt-12 lg:mt-0 lg:pt-0 flex flex-col'>
+    <div className='w-full p-2 h-[100%] lg:pt-4'>
+      <div className='flex flex-col justify-center items-center lg:my-12 lg:items-start'>
+        <div className='py-5'>
+          <h1 className='text-[#459ed5] text-2xl font-normal mb-2'>
+            Testimonials
+          </h1>
+          <p className='text-[#003D64]'>Amazing experiences from our trusted clients</p>
+        </div>
+        <div className='flex flex-wrap justify-center lg:justify-start w-full my-12'>
+          {/* Map over testimonials here */}
+          {TestimonialDetails.Testimonials.map(testimonial => (
+            <Testimonials key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
         </div>
